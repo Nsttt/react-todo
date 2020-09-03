@@ -2,6 +2,7 @@ import React from "react";
 
 export default function Form(props) {
   const inputTextHandler = (e) => {
+    console.log(e.target.value);
     props.setInputText(e.target.value);
   };
   const submitTodoHandler = (e) => {
@@ -23,7 +24,7 @@ export default function Form(props) {
       <button onClick={submitTodoHandler} className="todo-button" type="submit">
         <i className="fas fa-plus-square"></i>
       </button>
-      <div className-name="select">
+      <div className="select">
         <select name="todos" className="filter-todo">
           <option value="all">All</option>
           <option value="completed">Completed</option>
